@@ -1,5 +1,7 @@
-[// @author Rizky Farhan [rizky.farhan@gmail.com]]
-[// @license MIT [http://rizky.mit-license.org]
+<!-- 
+@author Rizky Farhan [rizky.farhan@gmail.com]
+@license MIT [http://rizky.mit-license.org]
+-->
 
 # Silly Message (Binary) Protocol
 
@@ -105,3 +107,6 @@ SMBP Altitude value is a pressure altittude in Metres from Mean Sea Level (MSL)
 - This is a thought exercise for how I might want to create my own IoT Binary
 Message protocol.I based my design on prior knowledge in integrating machine 
 messages and patterns I noticed when reading protocol documents. 
+
+@author Rizky Farhan [rizky.farhan@gmail.com]
+@license MIT [http://rizky.mit-license.org]
