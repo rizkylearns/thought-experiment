@@ -63,31 +63,38 @@ So, for example (in network byte order): [ 0x000800000000005661F524 ]
 represents 8 Byte field data with type 0x00 (GPS Timestamp since EPOCH) 
 and value 0x000000005661F524 or 
 ISO8601 2015-12-04T20:18:44Z.
-
+#### Silly Body Parts - The Essentials ####
+- Source ID
+SMBP Source-ID is 8-byte sized field value.
+SMBP Source-ID field type is 0x00
+SMBP Source-ID field value is a 64-bit number
+- Topic
+SMBP Topic is 2-Byte sized field value.
+SMBP Topic field type is 0x01
+SMBP Topic field value determines the payload contents
 #### Silly Body Parts - The GPS data fields ####
 - GPS Timestamp
 SMBP GPS Timestamp is 8-Byte sized field value.
-SMBP GPS Timestamp field type is 0x00
+SMBP GPS Timestamp field type is 0x02
 - GPS Latitude In 5 Decimal Points
 SMBP Latitude is 8-Byte sized field value.
-SMBP Latitude field type is 0x01
+SMBP Latitude field type is 0x03
 SMBP Latitude field value represents a decimal value to be resolved by 
 multiplying the incoming value with 10^-5
 - GPS Longitude In 5 Decimal Points
 SMBP Longitude is 8-Byte sized field value.
-SMBP Longitude field type is 0x01
+SMBP Longitude field type is 0x04
 SMBP Longitude field value represents a decimal value to be resolved by 
 multiplying the incoming value with 10^-5
 - GPS Heading In 2 Decimal Points
 SMBP Heading is 2-Byte sized field value.
-SMBP Heading field type is 0x02
+SMBP Heading field type is 0x05
 SMBP Heading field value represents heading in degrees from 000 to 36000, so 
 the actual incoming heading value is to be resolved by multiplying it with 
 10^-2
 - GPS Altitude In Decimal SMBP Altitude is 4-Byte sized field value
-SMBP Altitude field type is 0x03
+SMBP Altitude field type is 0x06
 SMBP Altitude value is a pressure altittude in Metres from Mean Sea Level (MSL)
-
 
 ## CRC-32 ECC ##
 
