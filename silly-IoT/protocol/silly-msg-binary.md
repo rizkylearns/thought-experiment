@@ -24,6 +24,7 @@ stored). In this article, however, I will still show 0xFFAACCEE..
 
 A Silly Header consists in a single SMBP consists of the following fields
 in sequence:
+
 1. [ 1 Byte ] Encoding. For SMBP, this field always returns [ 0x00 ].
 2. [ 1 Byte ] Message Type: Single-GPS [ 0x01 ], Multi [ 0x02 ] or other types 
 (not yet determined). For SMBP, this field always returns [ 0x01 ]. 
@@ -104,4 +105,3 @@ SMBP Altitude value is a pressure altittude in Metres from Mean Sea Level (MSL)
 - This is a thought exercise for how I might want to create my own IoT Binary
 Message protocol.I based my design on prior knowledge in integrating machine 
 messages and patterns I noticed when reading protocol documents. 
-
