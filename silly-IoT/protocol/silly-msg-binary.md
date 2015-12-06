@@ -59,9 +59,10 @@ This is why the fields of system timestamp and payload are separated.
 SMBP Silly Body parts schema is a simple trio: part field size, part field type, 
 and part field value i.e. SMBP Silly Body parts data payload consists of a chain 
 of 0 or more of the following:
-{ 2 Byte Field Value Byte Size N. Not including Field Type Byte Size }
-{ 1 Byte Field Type }
-{ N Byte Field Value }.
+- { 2 Byte Field Value Byte Size N. Not including Field Type Byte Size }
+- { 1 Byte Field Type }
+- { N Byte Field Value }.
+
 So, for example (in network byte order): [ 0x000800000000005661F524 ] 
 represents 8 Byte field data with type 0x00 (GPS Timestamp since EPOCH) 
 and value 0x000000005661F524 or 
@@ -102,6 +103,33 @@ SMBP Altitude value is a pressure altittude in Metres from Mean Sea Level (MSL)
 ## CRC-32 ECC ##
 
 6. [ 4 Byte ] CRC-32 Cyclic Redundancy Check bytes for error correction
+
+# Silly Message Binary Protocol Field Mappings
+## (Header) Encoding ##
+
+| Value | Remarks 		   | 
+|-------|------------------|
+| 0x00  |  Binary Encoding |
+
+## (Header) Message Type ##
+Message Type field acts as namespace and scheming for field data.
+
+| Value |  Remarks 		  														    | 
+|-------|---------------------------------------------------------------------------|
+| 0x01  |  Single-GPS. This message type is used for sending GPS sensor data scheme |
+
+## (Body) Message Type (0x01) Field Mapping ##
+Message Type field acts as namespace and scheming for field data.
+
+### (Body) Message Type (0x01) Field Mapping: Topic
+Each topic determines the machine's state at the time of message creation, exposing machine data as the machine state's attribute values at that time, if any.
+
+| Value |  Remarks 		                                   				          | 
+|-------|-------------------------------------------------------------------------|
+| 0x00  |  Login. This message is a login message           			          |
+| 0x01  |  GPS Report. This message contains silly Geodata of a sender machine    |
+
+
 
 # Remarks
 - This is a thought exercise for how I might want to create my own IoT Binary
