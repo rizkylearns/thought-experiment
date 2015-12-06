@@ -1,4 +1,5 @@
 #ignorables
 node_modules/
 .idea/
-.swp
+*.swp
+*~
