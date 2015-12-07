@@ -59,7 +59,7 @@ This is why the fields of system timestamp and payload are separated.
 SMBP Silly Body parts schema is a simple trio: part field size, part field type, 
 and part field value i.e. SMBP Silly Body parts data payload consists of a chain 
 of 0 or more of the following:
-- { 2 Byte Field Value Byte Size N. Not including Field Type Byte Size }
+- { 2 Byte Field Byte Size N. Not including Field Type Byte Size }
 - { 1 Byte Field Type }
 - { N Byte Field Value }.
 
