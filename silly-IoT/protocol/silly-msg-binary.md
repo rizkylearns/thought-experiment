@@ -46,7 +46,7 @@ extension.
 
 ## Silly Body ##
 
-4. [ 8 Byte ] System Timestamp as POSIX time (in seconds)
+4. [ 8 Byte ] System Timestamp as POSIX time (in milliseconds)
 5. [ N Byte ] 0 to N Byte data payload
 
 ### Silly Body Parts ###
