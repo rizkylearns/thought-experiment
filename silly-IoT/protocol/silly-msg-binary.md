@@ -35,8 +35,8 @@ like (size of msg size, size of crc, body schema, etc).
 Since SMBP always returns [ 0x01 ], The next sequences only deals with 
 message Type 'Single-GPS'.
 3. [ 4 Byte ] Body Size. Not including CRC bytes. Not including previous bytes.
-Not including itself (Body Size). Includes System Timestamp. Includes 0 to N 
-Byte data.
+Not including itself (Body Size). Includes System Timestamp. Includes topic.
+Includes 0 to N Byte data.
 
 ### Silly Header Remarks ###
 
