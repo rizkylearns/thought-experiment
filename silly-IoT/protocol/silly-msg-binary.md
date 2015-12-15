@@ -37,6 +37,7 @@ message Type 'Single-GPS'.
 3. [ 4 Byte ] Body Size. Not including CRC bytes. Not including previous bytes.
 Not including itself (Body Size). Includes System Timestamp. Includes topic.
 Includes 0 to N Byte data.
+4. [ 8 Byte ] Source ID. This is an 8-byte sized field. This is a 64-bit number, compulsory to be sent in every message to maintain the statelessness of the message identification. One example of having this message source id is to dedicate a storage for each message source id.
 
 ### Silly Header Remarks ###
 
@@ -46,8 +47,8 @@ extension.
 
 ## Silly Body ##
 
-4. [ 8 Byte ] System Timestamp as POSIX time (in milliseconds)
-5. [ N Byte ] 0 to N Byte data payload
+5. [ 8 Byte ] System Timestamp as POSIX time (in milliseconds)
+6. [ N Byte ] 0 to N Byte data payload
 
 ### Silly Body Parts ###
 
@@ -68,10 +69,6 @@ represents 8 Byte field data with type 0x00 (GPS Timestamp since EPOCH)
 and value 0x000000005661F524 or 
 ISO8601 2015-12-04T20:18:44Z.
 #### Silly Body Parts - The Essentials ####
-- Source ID
-SMBP Source-ID is 8-byte sized field value.
-SMBP Source-ID field type is 0x00
-SMBP Source-ID field value is a 64-bit number
 - Topic
 SMBP Topic is 2-Byte sized field value.
 SMBP Topic field type is 0x01
@@ -102,7 +99,7 @@ SMBP Altitude value is a pressure altittude in Metres from Mean Sea Level (MSL)
 
 ## CRC-32 ECC ##
 
-6. [ 4 Byte ] CRC-32 Cyclic Redundancy Check bytes for error correction
+7. [ 4 Byte ] CRC-32 Cyclic Redundancy Check bytes for error correction
 
 # Silly Message Binary Protocol Field Mappings
 ## (Header) Encoding ##
