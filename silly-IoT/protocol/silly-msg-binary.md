@@ -22,6 +22,11 @@ the lowest address (where the lowest significant byte is stored), and
 the right-hand-side is the highest address (where the most significant byte is 
 stored). In this article, however, I will still show 0xFFAACCEE..
 
+## SMBP Byte Allocation Summary ##
+Given than "N" is non-fixed number of bytes (N-bytes):
+[ Header: 14 bytes ] [ Body: N Bytes ] [ CRC: 4 Bytes ].
+
+
 ## Silly Header ##
 
 A Silly Header consists in a single SMBP consists of the following fields
@@ -34,10 +39,10 @@ This Message Type determines how the scheme for the rest of the field looks
 like (size of msg size, size of crc, body schema, etc). 
 Since SMBP always returns [ 0x01 ], The next sequences only deals with 
 message Type 'Single-GPS'.
-3. [ 4 Byte ] Body Size. Not including CRC bytes. Not including previous bytes.
-Not including itself (Body Size). Includes System Timestamp. Includes topic.
+3. [ 8 Byte ] Source ID. This is an 8-byte sized field. This is a 64-bit number, compulsory to be sent in every message to maintain the statelessness of the message identification. One example of having this message source id is to dedicate a storage for each message source id.
+4. [ 4 Byte ] Body Size. Not including CRC bytes. Not including previous bytes.
+Not including itself (Body Size). Includes System Timestamp (since this is a body field). Includes topic (since this is a body field).
 Includes 0 to N Byte data.
-4. [ 8 Byte ] Source ID. This is an 8-byte sized field. This is a 64-bit number, compulsory to be sent in every message to maintain the statelessness of the message identification. One example of having this message source id is to dedicate a storage for each message source id.
 
 ### Silly Header Remarks ###
 
