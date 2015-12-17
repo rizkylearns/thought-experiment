@@ -26,10 +26,20 @@ stored). In this article, however, I will still show 0xFFAACCEE..
 Given than "N" is non-fixed number of bytes (N-bytes):
 [ Header: 14 bytes ] [ Body: N Bytes ] [ CRC: 4 Bytes ].
 
-| [___  | ______ | _  | _ | _ | H | E | A | D  | E   | R  | _  | _  | _]     | [BODY] | [CRC]     |
-|-------|--------|----|---|---|---|---|---|----|-----|----|----|----|--------|--------|-----------|
-|   0   |    1   |  2 | 3 | 4 | 5 | 6 | 7 |  8 |  9  | 10 | 11 | 12 |   13   | 14...N | N+1...N+4 |
-| [Enc] | [Type] | [S | O | U | R | C | E | -- | ID] | [S | I  | Z  | E_(N)] |  [...] |   [...]   |
+| [__H  | E             |  A          |  D      |    E             |       R__]       |
+|:-----:|:-------------:|:-----------:|:-------:|:-----------------:|:---------------:|
+|   0   |    1          |    2...9    |    10   |      11...19      |     20...23     |
+| [Enc] | [MessageType] | [Source_ID] | [Topic] | [SystemTimestamp] | [Body_Size (N)] |
+
+| [BODY] |
+|:------:|
+| 24...N |
+| [...]  |
+
+| [CRC]     |
+|:---------:|
+| N+1...N+4 |
+|   [...]   |
 
 ## Silly Header ##
 
@@ -44,7 +54,9 @@ like (size of msg size, size of crc, body schema, etc).
 Since SMBP always returns [ 0x01 ], The next sequences only deals with 
 message Type 'Single-GPS'.
 3. [ 8 Byte ] Source ID. This is an 8-byte sized field. This is a 64-bit number, compulsory to be sent in every message to maintain the statelessness of the message identification. One example of having this message source id is to dedicate a storage for each message source id.
-4. [ 4 Byte ] Body Size. Not including CRC bytes. Not including previous bytes.
+4. [ 1 Byte ] Topic. SMBP Topic field value determines the payload contents
+5. [ 8 Byte ] System Timestamp as POSIX time (in milliseconds)
+6. [ 4 Byte ] Body Size. Not including CRC bytes. Not including previous bytes.
 Not including itself (Body Size). Includes System Timestamp (since this is a body field). Includes topic (since this is a body field).
 Includes 0 to N Byte data.
 
@@ -56,8 +68,7 @@ extension.
 
 ## Silly Body ##
 
-5. [ 8 Byte ] System Timestamp as POSIX time (in milliseconds)
-6. [ N Byte ] 0 to N Byte data payload
+7. [ N Byte ] 0 to N Byte data payload
 
 ### Silly Body Parts ###
 
@@ -69,20 +80,16 @@ This is why the fields of system timestamp and payload are separated.
 SMBP Silly Body parts schema is a simple trio: part field size, part field type, 
 and part field value i.e. SMBP Silly Body parts data payload consists of a chain 
 of 0 or more of the following:
-- { 2 Byte Field Byte Size N. Not including Field Type Byte Size }
 - { 1 Byte Field Type }
+- { 2 Byte Field Byte Size N }
 - { N Byte Field Value }.
 
 So, for example (in network byte order): [ 0x000800000000005661F524 ] 
 represents 8 Byte field data with type 0x00 (GPS Timestamp since EPOCH) 
 and value 0x000000005661F524 or 
 ISO8601 2015-12-04T20:18:44Z.
-#### Silly Body Parts - The Essentials ####
-- Topic
-SMBP Topic is 2-Byte sized field value.
-SMBP Topic field type is 0x01
-SMBP Topic field value determines the payload contents
-#### Silly Body Parts - The GPS data fields ####
+
+#### Silly Body Parts - The GPS data fields (MessageType = 1) ####
 - GPS Timestamp
 SMBP GPS Timestamp is 8-Byte sized field value.
 SMBP GPS Timestamp field type is 0x02
@@ -108,7 +115,7 @@ SMBP Altitude value is a pressure altittude in Metres from Mean Sea Level (MSL)
 
 ## CRC-32 ECC ##
 
-7. [ 4 Byte ] CRC-32 Cyclic Redundancy Check bytes for error correction
+8. [ 4 Byte ] CRC-32 Cyclic Redundancy Check bytes for error correction
 
 # Silly Message Binary Protocol Field Mappings
 ## (Header) Encoding ##
@@ -141,6 +148,10 @@ Each topic determines the machine's state at the time of message creation, expos
 - This is a thought exercise for how I might want to create my own IoT Binary
 Message protocol.I based my design on prior knowledge in integrating machine 
 messages and patterns I noticed when reading protocol documents. 
+- The size of SMBP header is 23 bytes.
+- CRC requires 4 bytes
+- Body is N bytes = 0...(2^(4*8))
+- Therefore, SMBP byte size is at least 27 bytes and at most 27 + ((2^(4*8)) bytes. This value can be used to validate SMBP messages
 
 @author Rizky Farhan [rizky.farhan@gmail.com]
 @license MIT [http://rizky.mit-license.org]
