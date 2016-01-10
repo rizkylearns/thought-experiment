@@ -152,6 +152,7 @@ messages and patterns I noticed when reading protocol documents.
 - CRC requires 4 bytes
 - Body is N bytes = 0...(2^(4*8))
 - Therefore, SMBP byte size is at least 27 bytes and at most 27 + ((2^(4*8)) bytes. This value can be used to validate SMBP messages
-
+- version 0.1 has no authorization mechanics built-in. So there's going to be a problem if the protocol does not include authorization mechanism: it is easy to send a valid message with one sourceId from multiple sources. This violates the protocol in a way that one 'thing' identity is shared by multiple sources.
+- Version 0.2 is looking into a simple 2-Byte authorization bytes as a main segment so it can be easily 'peeked'.
 @author Rizky Farhan [rizky.farhan@gmail.com]
 @license MIT [http://rizky.mit-license.org]
