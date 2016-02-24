@@ -72,8 +72,7 @@ extension.
 
 ### Silly Body Parts ###
 
-The SMBP Silly Body parts consists of a system timestamp (timestamp from message 
-creator) and data payload. I noticed over the years of machine integration that 
+The SMBP Silly Body parts consists of data payload. I noticed over the years of machine integration that 
 'timeliness' is the utmost important piece of information. Even if there is no 
 data payload, but there is a Timestamp, then a piece of data is still usable.
 This is why the fields of system timestamp and payload are separated.
