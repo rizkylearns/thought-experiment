@@ -9,3 +9,4 @@ node_modules/
 
 # #ignore jekyll autos
 _site
+Gemfile.lock
