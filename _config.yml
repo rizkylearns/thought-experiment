@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Writing these ideas on Github is one step closer to their reality.
   I will not abandon my scrapbook.
 baseurl: ""  # the subpath of your site, e.g. /blog/
-url: "https://rizkylearns.github.io/thought-experiment" # the base hostname & protocol for your site
+url: "https://rizkylearns.github.io/thought-experiment/" # the base hostname & protocol for your site
 twitter_username: whatrizkydo 
 github_username: rizkyLearns 
 
