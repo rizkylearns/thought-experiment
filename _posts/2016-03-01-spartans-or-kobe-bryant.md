@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spartans or Kobe Bryant?"
-date:   2016-02-28 
+date:   2016-03-01 
 categories: organization 
 tags: idea concept
 ---

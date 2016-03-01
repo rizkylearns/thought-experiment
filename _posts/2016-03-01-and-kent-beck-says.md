@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "And Kent Beck Says"
-date:   2016-02-28 
+date:   2016-03-01 
 categories: reference inspiration
 tags: inspiration
 ---
