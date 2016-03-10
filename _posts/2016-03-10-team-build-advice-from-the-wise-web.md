@@ -6,7 +6,7 @@ categories: organization
 tags: idea concept
 ---
 
-Building a team is never easy. I have been a member of software engineering team with differing culture in my career. 
+Building a team is never easy. I have been a member of software engineering team with differing work culture in my career. 
 
 I started from being a member of a highly structured hierarchy where each individual has a specific designation and organizational position and a specific set of roles and responsibilities. This organization is mature enough that it has its own new-hire package; an HR took me to meet everybody in their cubicles, my manager gave me a training schedule to introduce me to the specifics of their products and to the standard practices I must follow, from HR policy to IT policy to Software Engineering policy. I did not have much freedom to interact directly to anyone in the organization, maybe because I did not have to, but I was content to know that they are reachable if I need them. I ended up to only reach a specific number of people: my two mentors who guided my work and my manager to whom I report. 
 
