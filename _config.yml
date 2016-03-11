@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   I want to share with the world ideas that are worth sharing, starting from my own.
   Writing these ideas on Github is one step closer to their reality.
   I will not abandon my scrapbook.
-baseurl: "/thought-experiment"  # the subpath of your site, e.g. /blog/
+baseurl: "/thought-experiment/"  # the subpath of your site, e.g. /blog/
 #url: "https://rizkylearns.github.io/thought-experiment/" # the base hostname & protocol for your site
 url: "https://rizkylearns.github.io" # the base hostname & protocol for your site
 twitter_username: whatrizkydo 
@@ -17,7 +17,7 @@ github_username: rizkyLearns
 markdown: kramdown
 
 paginate: 4
-paginate_path: "/thought-experiment/page:num"
+#paginate_path: "/thought-experiment/page:num"
 
 author: Rizky Farhan
 
