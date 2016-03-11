@@ -1,7 +1,7 @@
 ---
 layout: page
 title: acknowledgement
-permalink: /acknowledgement/
+permalink: /thought-experiment/acknowledgement/
 image: /thought-experiment/images/pic01.jpg
 ---
 ### Website Design
