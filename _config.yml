@@ -17,6 +17,7 @@ github_username: rizkyLearns
 markdown: kramdown
 
 paginate: 4
+paginate_path: "/thought-experiment/:num"
 
 author: Rizky Farhan
 
