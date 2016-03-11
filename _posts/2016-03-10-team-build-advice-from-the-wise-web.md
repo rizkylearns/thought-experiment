@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Team Build Advice From The Wise Web"
+title:  "Team Building - Advice From The Wise Web"
 date:   2016-03-10 
 categories: organization 
 tags: idea concept
