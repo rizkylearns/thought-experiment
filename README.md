@@ -1,6 +1,3 @@
 ## Thought Experiment ##
 
-Ideas, if not  realized, are nothing but air. I have spent years jotting down my ideas in my trusty scrapbook.
-I want to share with the world ideas that are worth sharing, starting from my own.
-Writing these ideas on Github is one step closer to their reality.
-I will not abandon my scrapbook.
+I now have a working static page for this project under branch "gh-pages". I will leave this branch open for at least until January 2017 to keep the history of the documents that I have kept updated before this branch "gh-pages" is created.
