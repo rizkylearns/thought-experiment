@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Silly IoT - The Protocol"
-date:   2016-03-15 00:20:00
+title:  "Silly IoT - The Protocol (Conversation)"
+date:   2016-03-15 
 categories: IoT Career-Buildup
 tags: idea concept built
 ---
