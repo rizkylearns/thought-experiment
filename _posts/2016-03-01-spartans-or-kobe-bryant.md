@@ -3,7 +3,7 @@ layout: post
 title:  "Spartans or Kobe Bryant?"
 date:   2016-03-01 
 categories: organization 
-tags: idea concept
+tags: idea concept built
 ---
 
 Building a team is never easy. I took the liberty to think really hard for how and who should join my team of software engineers. I took the liberty to envision what kind of team do I favor and go for it. I do not want to talk about why do I have to do all this (because incessant beuraucratic drama has no value in my thought-experiment), instead I want to share my team-building visions, ideas, and actions. When this idea is realized, I want to observe whether it is effective and/or can turn one terrible situation to a slightly better one.

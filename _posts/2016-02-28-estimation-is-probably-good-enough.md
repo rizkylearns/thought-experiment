@@ -3,7 +3,7 @@ layout: post
 title:  "Estimation is Probably Good Enough"
 date:   2016-02-28 
 categories: organization project
-tags: idea concept realized
+tags: idea concept built
 ---
 
 Here is an idea. When I am in a position when peers, customers or colleagues, ask the kind of question "So, Rizky, when can this thing be done? Can you tell me now/yesterday/next week?", my first reaction is usually "Are you serious?". Ever since I came to meet a more "sophisticated" group of people, and demonstrated how work can get organized (and done), I realized there's another reaction I can use. After all, it's not always their intention to corner me into answering such question. When they don't, I think what they really after is, well, as the title says, an estimation. It depends on who I talk to, an estimation could be used as a critical decision too; one being whether or not the project work should go ahead or whether I will get paid.
