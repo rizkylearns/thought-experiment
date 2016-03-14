@@ -6,6 +6,8 @@ categories: IoT Career-Buildup
 tags: idea concept built
 ---
 
+Head to my [Hydra Project Github Page](https://github.com/rizkylearns/project-hydra) to see how this concept is built
+
 # Silly Message (Binary) Protocol
 
 A Silly Message Binary Protocol (SMBP) is composed of three fields:
