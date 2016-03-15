@@ -47,7 +47,7 @@ Kent Beck's TDD: Make It Work, Make It Right. Making the implementation of SMBP 
 - Pipeable Input
 - Pipeable Output
 
-Keeping in mind that my logging implementation may need another revisit to ensure that I will have my function logging to work.
+Keep in mind that my logging implementation may need another revisit to ensure that I will have my function logging to work.
 
 # What's Next?
 
