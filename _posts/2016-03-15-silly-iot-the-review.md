@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Silly IoT - The Review"
-date:   2016-03-15 20:00:00 +04:00
+date:   2016-03-16 00:00:00 +04:00
 categories: IoT Career-Buildup
 tags: idea concept review
 ---
