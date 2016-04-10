@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Remember Maschutu!"
-date:   2016-04-10 16:30:00 +04:00
+date:   2016-04-10 15:30:00 +04:00
 categories: career
 tags: idea concept review
 ---
