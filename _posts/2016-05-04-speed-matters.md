@@ -6,8 +6,6 @@ date: 2016-05-04T06:00:00.000Z
 categories: ideation organization
 tags: idea concept philosophy
 ---
-## Speed Matters 
-
 If I could choose a one word mantra to have a product in technology, I choose **SPEED**.
 
 Speed is the ultimate measurement unit for every aspect of a technology-oriented product along with everything and everyone that surrounds it.
