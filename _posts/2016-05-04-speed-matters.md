@@ -1,5 +1,10 @@
 ---
 published: true
+layout: post
+title: Speed Matters
+date: 2016-05-04T06:00:00.000Z
+categories: ideation organization
+tags: idea concept philosophy
 ---
 ## Speed Matters 
 
