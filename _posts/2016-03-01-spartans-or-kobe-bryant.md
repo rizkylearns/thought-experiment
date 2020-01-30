@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spartans or Kobe Bryant?"
+title:  "Spartans or a Lone Hero?"
 date:   2016-03-01 
 categories: organization 
 tags: idea concept built
